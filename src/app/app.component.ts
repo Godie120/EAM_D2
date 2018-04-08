@@ -13,10 +13,10 @@ export class AppComponent {
 	posts: Post[];
 
 	constructor(private postsService: PostsServiceService) {
-		// this.posts = postsService.getPosts();
-		postsService.getPostsHttp().subscribe((content) => {
-			this.posts = content;
-		});
+		this.posts = postsService.getPosts();
+		// postsService.getPostsHttp().subscribe((content) => {
+		// 	this.posts = content;
+		// });
 
 		// this.posts = postsService.getPostsHttp();
 	}
